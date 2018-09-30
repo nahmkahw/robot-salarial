@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180930 22:22:23.598" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/tuktukthailand/robots/official.robot" id="s1" name="Official">
+<test id="s1-t1" name="เข้าสู่ระบบ">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://localhost/home</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20180930 22:22:23.782" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/home'.</msg>
+<status status="PASS" endtime="20180930 22:22:27.798" starttime="20180930 22:22:23.782"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180930 22:22:28.077" starttime="20180930 22:22:27.799"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>เข้าสู่ระบบ</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:28.100" starttime="20180930 22:22:28.077"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:28.101" starttime="20180930 22:22:28.100"></status>
+</kw>
+<doc>ผู้ใช้ต้องเข้าสู่ระบบได้</doc>
+<status status="PASS" endtime="20180930 22:22:28.101" critical="yes" starttime="20180930 22:22:23.779"></status>
+</test>
+<test id="s1-t2" name="ทดสอบข้าราชการ">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>V-9999</arg>
+</arguments>
+<msg timestamp="20180930 22:22:28.105" level="INFO">Typing text 'V-9999' into text field 'modlgn_username'.</msg>
+<status status="PASS" endtime="20180930 22:22:28.231" starttime="20180930 22:22:28.104"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>hugghugg</arg>
+</arguments>
+<msg timestamp="20180930 22:22:28.232" level="INFO">Typing text 'hugghugg' into text field 'modlgn_passwd'.</msg>
+<status status="PASS" endtime="20180930 22:22:28.327" starttime="20180930 22:22:28.231"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id:Login</arg>
+</arguments>
+<msg timestamp="20180930 22:22:28.328" level="INFO">Clicking element 'id:Login'.</msg>
+<status status="PASS" endtime="20180930 22:22:29.808" starttime="20180930 22:22:28.327"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>ข้าราชการ</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:29.835" starttime="20180930 22:22:29.809"></status>
+</kw>
+<kw name="Start Test Offcial">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[contains(.,"ข้าราชการ")]</arg>
+</arguments>
+<msg timestamp="20180930 22:22:29.836" level="INFO">Clicking element '//a[contains(.,"ข้าราชการ")]'.</msg>
+<status status="PASS" endtime="20180930 22:22:30.530" starttime="20180930 22:22:29.836"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>บันทึกผลประเมิน</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:30.554" starttime="20180930 22:22:30.531"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//select[@id='ftype']</arg>
+</arguments>
+<msg timestamp="20180930 22:22:30.555" level="INFO">Clicking element 'xpath=//select[@id='ftype']'.</msg>
+<status status="PASS" endtime="20180930 22:22:30.663" starttime="20180930 22:22:30.554"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//option[@value='1']</arg>
+</arguments>
+<msg timestamp="20180930 22:22:30.663" level="INFO">Clicking element 'xpath=//option[@value='1']'.</msg>
+<status status="PASS" endtime="20180930 22:22:30.721" starttime="20180930 22:22:30.663"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>วรานนท์ คงสง</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:30.741" starttime="20180930 22:22:30.721"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[contains(.,"กรอกคะแนนผลการประเมิน")]</arg>
+</arguments>
+<msg timestamp="20180930 22:22:30.742" level="INFO">Clicking element '//a[contains(.,"กรอกคะแนนผลการประเมิน")]'.</msg>
+<status status="PASS" endtime="20180930 22:22:31.611" starttime="20180930 22:22:30.741"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>วรานนท์ คงสง</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:31.621" starttime="20180930 22:22:31.611"></status>
+</kw>
+<status status="PASS" endtime="20180930 22:22:31.621" starttime="20180930 22:22:29.835"></status>
+</kw>
+<kw name="Default Value">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SCORE}</arg>
+<arg>${ZERO}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:31.623" level="INFO">Typing text '0' into text field 's873'.</msg>
+<status status="PASS" endtime="20180930 22:22:31.706" starttime="20180930 22:22:31.622"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:31.707" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:31.787" starttime="20180930 22:22:31.706"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SCORETRUE}</arg>
+<arg>${ZERO}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:31.789" level="INFO">Typing text '0' into text field 'scoretrue873'.</msg>
+<status status="PASS" endtime="20180930 22:22:31.875" starttime="20180930 22:22:31.788"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:31.876" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:31.931" starttime="20180930 22:22:31.876"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${LATED}</arg>
+<arg>${ZERO}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:31.932" level="INFO">Typing text '0' into text field 'lated873'.</msg>
+<status status="PASS" endtime="20180930 22:22:32.028" starttime="20180930 22:22:31.931"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:32.029" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:32.088" starttime="20180930 22:22:32.028"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ABSENCE}</arg>
+<arg>${ZERO}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:32.089" level="INFO">Typing text '0' into text field 'ab873'.</msg>
+<status status="PASS" endtime="20180930 22:22:32.195" starttime="20180930 22:22:32.088"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:32.196" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:32.247" starttime="20180930 22:22:32.195"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${JOB}</arg>
+<arg>${DOT}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:32.248" level="INFO">Typing text '-' into text field 'job873'.</msg>
+<status status="PASS" endtime="20180930 22:22:32.346" starttime="20180930 22:22:32.248"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:32.347" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:32.406" starttime="20180930 22:22:32.346"></status>
+</kw>
+<status status="PASS" endtime="20180930 22:22:32.406" starttime="20180930 22:22:31.622"></status>
+</kw>
+<kw name="Test Score">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SCORE}</arg>
+<arg>${SCORE_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:32.409" level="INFO">Typing text '98' into text field 's873'.</msg>
+<status status="PASS" endtime="20180930 22:22:32.552" starttime="20180930 22:22:32.408"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:32.553" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:32.670" starttime="20180930 22:22:32.553"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_SCORE_EQUAL_SCORETRUE}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:32.741" starttime="20180930 22:22:32.670"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SCORE}</arg>
+<arg>${SCORE_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:32.742" level="INFO">Typing text '98' into text field 's873'.</msg>
+<status status="PASS" endtime="20180930 22:22:32.807" starttime="20180930 22:22:32.741"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:32.808" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:32.946" starttime="20180930 22:22:32.807"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_MORETHAN100}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:32.974" starttime="20180930 22:22:32.946"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SCORE}</arg>
+<arg>${SCORE_MORETHAN100_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:32.975" level="INFO">Typing text '101' into text field 's873'.</msg>
+<status status="PASS" endtime="20180930 22:22:33.036" starttime="20180930 22:22:32.975"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:33.037" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:33.126" starttime="20180930 22:22:33.036"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_MORETHAN100}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:33.142" starttime="20180930 22:22:33.127"></status>
+</kw>
+<status status="PASS" endtime="20180930 22:22:33.142" starttime="20180930 22:22:32.407"></status>
+</kw>
+<kw name="Test Score True">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SCORETRUE}</arg>
+<arg>${SCORE_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:33.144" level="INFO">Typing text '98' into text field 'scoretrue873'.</msg>
+<status status="PASS" endtime="20180930 22:22:33.382" starttime="20180930 22:22:33.143"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:33.382" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:33.496" starttime="20180930 22:22:33.382"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SCORETRUE}</arg>
+<arg>${SCORE_MORETHAN100_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:33.497" level="INFO">Typing text '101' into text field 'scoretrue873'.</msg>
+<status status="PASS" endtime="20180930 22:22:33.722" starttime="20180930 22:22:33.497"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:33.723" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:33.819" starttime="20180930 22:22:33.722"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_MORETHAN100}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:33.833" starttime="20180930 22:22:33.819"></status>
+</kw>
+<status status="PASS" endtime="20180930 22:22:33.833" starttime="20180930 22:22:33.143"></status>
+</kw>
+<kw name="Test Job">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${JOB}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:33.835" level="INFO">Typing text '' into text field 'job873'.</msg>
+<status status="PASS" endtime="20180930 22:22:33.967" starttime="20180930 22:22:33.834"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:33.968" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:34.093" starttime="20180930 22:22:33.967"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_LAVEL}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:34.128" starttime="20180930 22:22:34.093"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${JOB}</arg>
+<arg>${DOT}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:34.129" level="INFO">Typing text '-' into text field 'job873'.</msg>
+<status status="PASS" endtime="20180930 22:22:34.183" starttime="20180930 22:22:34.128"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:34.185" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:34.234" starttime="20180930 22:22:34.183"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${JOB}</arg>
+<arg>${JOB_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:34.235" level="INFO">Typing text 'งานพัฒนาระบบ' into text field 'job873'.</msg>
+<status status="PASS" endtime="20180930 22:22:34.438" starttime="20180930 22:22:34.234"></status>
+</kw>
+<status status="PASS" endtime="20180930 22:22:34.438" starttime="20180930 22:22:33.834"></status>
+</kw>
+<kw name="Test Absence">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ABSENCE}</arg>
+<arg>${ABSENCE_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:34.441" level="INFO">Typing text '1' into text field 'ab873'.</msg>
+<status status="PASS" endtime="20180930 22:22:34.512" starttime="20180930 22:22:34.440"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:34.512" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:34.574" starttime="20180930 22:22:34.512"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SCORE}</arg>
+<arg>${SCORE_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:34.576" level="INFO">Typing text '98' into text field 's873'.</msg>
+<status status="PASS" endtime="20180930 22:22:34.698" starttime="20180930 22:22:34.575"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:34.699" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:34.790" starttime="20180930 22:22:34.699"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ABSENCE}</arg>
+<arg>${ABSENCE_OVERLEVEL1_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:34.791" level="INFO">Typing text '6' into text field 'ab873'.</msg>
+<status status="PASS" endtime="20180930 22:22:34.870" starttime="20180930 22:22:34.790"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:34.871" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:35.135" starttime="20180930 22:22:34.870"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_LEVEL1}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:35.183" starttime="20180930 22:22:35.135"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:35.183" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:35.376" starttime="20180930 22:22:35.183"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ABSENCE}</arg>
+<arg>${ABSENCE_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:35.377" level="INFO">Typing text '1' into text field 'ab873'.</msg>
+<status status="PASS" endtime="20180930 22:22:35.499" starttime="20180930 22:22:35.376"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:35.499" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:35.572" starttime="20180930 22:22:35.499"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SCORE}</arg>
+<arg>${SCORE_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:35.573" level="INFO">Typing text '98' into text field 's873'.</msg>
+<status status="PASS" endtime="20180930 22:22:35.638" starttime="20180930 22:22:35.572"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:35.639" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:35.879" starttime="20180930 22:22:35.638"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ABSENCE}</arg>
+<arg>${ABSENCE_OVERLEVEL2_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:35.880" level="INFO">Typing text '11' into text field 'ab873'.</msg>
+<status status="PASS" endtime="20180930 22:22:35.975" starttime="20180930 22:22:35.879"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:35.976" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:36.406" starttime="20180930 22:22:35.976"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_LEVEL1}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:36.476" starttime="20180930 22:22:36.407"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:36.477" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:36.546" starttime="20180930 22:22:36.476"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_LEVEL2}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:36.581" starttime="20180930 22:22:36.546"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:36.582" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:36.702" starttime="20180930 22:22:36.581"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ABSENCE}</arg>
+<arg>${ABSENCE_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:36.703" level="INFO">Typing text '1' into text field 'ab873'.</msg>
+<status status="PASS" endtime="20180930 22:22:36.784" starttime="20180930 22:22:36.702"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:36.785" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:36.838" starttime="20180930 22:22:36.784"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SCORE}</arg>
+<arg>${SCORE_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:36.839" level="INFO">Typing text '98' into text field 's873'.</msg>
+<status status="PASS" endtime="20180930 22:22:36.958" starttime="20180930 22:22:36.839"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:36.959" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.021" starttime="20180930 22:22:36.958"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ABSENCE}</arg>
+<arg>${ABSENCE_OVERLEVEL3_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.022" level="INFO">Typing text '16' into text field 'ab873'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.088" starttime="20180930 22:22:37.021"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.089" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.203" starttime="20180930 22:22:37.088"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_LEVEL1}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:37.216" starttime="20180930 22:22:37.204"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.217" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.268" starttime="20180930 22:22:37.216"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_LEVEL2}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:37.281" starttime="20180930 22:22:37.268"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.282" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.326" starttime="20180930 22:22:37.281"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_LEVEL3}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:37.354" starttime="20180930 22:22:37.327"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.354" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.437" starttime="20180930 22:22:37.354"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ABSENCE}</arg>
+<arg>${ABSENCE_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.438" level="INFO">Typing text '1' into text field 'ab873'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.523" starttime="20180930 22:22:37.437"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.523" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.570" starttime="20180930 22:22:37.523"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SCORE}</arg>
+<arg>${SCORE_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.571" level="INFO">Typing text '98' into text field 's873'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.638" starttime="20180930 22:22:37.570"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.639" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.690" starttime="20180930 22:22:37.638"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ABSENCE}</arg>
+<arg>${ABSENCE_OVERLEVEL4_VALUE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.691" level="INFO">Typing text '24' into text field 'ab873'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.753" starttime="20180930 22:22:37.690"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.754" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.870" starttime="20180930 22:22:37.754"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_LEVEL1}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:37.885" starttime="20180930 22:22:37.870"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.885" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:37.937" starttime="20180930 22:22:37.885"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_LEVEL2}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:37.951" starttime="20180930 22:22:37.937"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:37.952" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:38.019" starttime="20180930 22:22:37.951"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_LEVEL3}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:38.038" starttime="20180930 22:22:38.020"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:38.039" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:38.092" starttime="20180930 22:22:38.038"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${ERROR_LEVEL4}</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:38.119" starttime="20180930 22:22:38.093"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:38.120" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:38.241" starttime="20180930 22:22:38.119"></status>
+</kw>
+<status status="PASS" endtime="20180930 22:22:38.241" starttime="20180930 22:22:34.439"></status>
+</kw>
+<kw name="Back Main Page">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HEADER_H3}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:38.244" level="INFO">Clicking element 'xpath=//h3'.</msg>
+<status status="PASS" endtime="20180930 22:22:38.298" starttime="20180930 22:22:38.242"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${BACK_MAIN_PAGE}</arg>
+</arguments>
+<msg timestamp="20180930 22:22:38.299" level="INFO">Clicking element '//a[contains(.,"กลับไปหน้าหลัก")]'.</msg>
+<status status="PASS" endtime="20180930 22:22:39.177" starttime="20180930 22:22:38.299"></status>
+</kw>
+<status status="PASS" endtime="20180930 22:22:39.177" starttime="20180930 22:22:38.242"></status>
+</kw>
+<doc>ทดสอบข้าราชการ</doc>
+<status status="PASS" endtime="20180930 22:22:39.177" critical="yes" starttime="20180930 22:22:28.102"></status>
+</test>
+<test id="s1-t3" name="ออกจากระบบ">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//a[contains(.,"กลับสู่หน้าหลักกองคลัง")]</arg>
+</arguments>
+<msg timestamp="20180930 22:22:39.183" level="INFO">Clicking element '//a[contains(.,"กลับสู่หน้าหลักกองคลัง")]'.</msg>
+<status status="PASS" endtime="20180930 22:22:40.429" starttime="20180930 22:22:39.183"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>กรอกคะแนนประเมิน</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:40.459" starttime="20180930 22:22:40.429"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@value='BUTTON_LOGOUT']</arg>
+</arguments>
+<msg timestamp="20180930 22:22:40.459" level="INFO">Clicking element 'xpath=//input[@value='BUTTON_LOGOUT']'.</msg>
+<status status="PASS" endtime="20180930 22:22:41.892" starttime="20180930 22:22:40.459"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>เข้าสู่ระบบ</arg>
+</arguments>
+<status status="PASS" endtime="20180930 22:22:41.928" starttime="20180930 22:22:41.893"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180930 22:22:42.068" starttime="20180930 22:22:41.928"></status>
+</kw>
+<doc>ผู้ใช้ต้องออกจากระบบได้</doc>
+<status status="PASS" endtime="20180930 22:22:42.069" critical="yes" starttime="20180930 22:22:39.179"></status>
+</test>
+<doc>ทดสอบข้าราชการ</doc>
+<status status="PASS" endtime="20180930 22:22:42.071" starttime="20180930 22:22:23.601"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Official" pass="3">Official</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

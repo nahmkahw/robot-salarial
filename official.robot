@@ -34,14 +34,15 @@ ${JOB_VALUE}                                        งานพัฒนาร�
 *** Test case ***
 เข้าสู่ระบบ
     [Documentation]                                 ผู้ใช้ต้องเข้าสู่ระบบได้
-    open browser                                    http://localhost/home
+    open browser                                    http://localhost/home   Chrome
+    Maximize Browser Window
     wait until page contains                        เข้าสู่ระบบ
     Set Selenium Speed  ${DELAY}
 ทดสอบข้าราชการ
     [Documentation]                                 ทดสอบข้าราชการ
     Input Text  ${username}                         V-9999
     Input Text  ${password}                         hugghugg
-    Click Element                                   class:button
+    Click Element                                   id:Login
     wait until page contains                        ข้าราชการ
     Start Test Offcial
     Default Value
