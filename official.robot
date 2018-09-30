@@ -34,7 +34,8 @@ ${JOB_VALUE}                                        งานพัฒนาร�
 *** Test case ***
 เข้าสู่ระบบ
     [Documentation]                                 ผู้ใช้ต้องเข้าสู่ระบบได้
-    open browser                                    http://localhost/home
+    Set Environment Variable  webdriver.gecko.driver  usr/local/bin/geckodriver
+    open browser                                    http://localhost/home firefox
     wait until page contains                        เข้าสู่ระบบ
     Set Selenium Speed  ${DELAY}
 ทดสอบข้าราชการ
