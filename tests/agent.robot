@@ -34,7 +34,7 @@ ${JOB_VALUE}                                        งานพัฒนาร�
 *** Test case ***
 เข้าสู่ระบบ
     [Documentation]                                 ผู้ใช้ต้องเข้าสู่ระบบได้
-    open browser                                    http://localhost/home Chrome
+    open browser                                    http://localhost/home   chrome
     Maximize Browser Window
     wait until page contains                        เข้าสู่ระบบ
     Set Selenium Speed  ${DELAY}
