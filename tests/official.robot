@@ -35,6 +35,7 @@ ${JOB_VALUE}                                        งานพัฒนาร�
 เข้าสู่ระบบ
     [Documentation]                                 ผู้ใช้ต้องเข้าสู่ระบบได้
     open browser                                    http://localhost/home
+    Maximize Browser Window
     wait until page contains                        เข้าสู่ระบบ
     Set Selenium Speed  ${DELAY}
 ทดสอบข้าราชการ
