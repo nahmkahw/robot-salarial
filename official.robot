@@ -34,7 +34,7 @@ ${JOB_VALUE}                                        งานพัฒนาร�
 *** Test case ***
 เข้าสู่ระบบ
     [Documentation]                                 ผู้ใช้ต้องเข้าสู่ระบบได้
-    open browser                                    http://localhost/home firefox
+    open browser                                    http://localhost/home
     wait until page contains                        เข้าสู่ระบบ
     Set Selenium Speed  ${DELAY}
 ทดสอบข้าราชการ
@@ -59,6 +59,7 @@ ${JOB_VALUE}                                        งานพัฒนาร�
     [Teardown]                                      Close Browser
 
 *** Keywords ***
+Set Environment Variable  webdriver.gecko.driver    /usr/local/bin/gekodriver
 Start Test Offcial
     Click Element                                   //a[contains(.,"ข้าราชการ")]
     wait until page contains                        บันทึกผลประเมิน
