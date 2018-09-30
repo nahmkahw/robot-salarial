@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation                                       ทดสอบข้าราชการ
 Library                                             Selenium2Library
-Set Environment Variable  webdriver.gecko.driver  usr/local/bin/geckodriver
 
 *** Variables ***
 ${DELAY}                                            0
